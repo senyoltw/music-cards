@@ -19,16 +19,33 @@ def connectMPD():
 	except:
 		print 'Could not connect to MPD server'
 
+def playlist(client,plist):
+	try:
+		plist2 = re.sub('file:','',plist)
+		print plist
+		for root,dirs,files in os.walk(plist2):
+			for filename in files:
+				filename = plist + filename
+				print filename
+				client.add(filename)
+		return plist
+	except Exception as e: 
+		print(e)
+
 def play(client, plist):
 	try:
 		client.stop()
 		client.clear()
-		client.add(plist)
-		if re.search('playlist',plist):
+		if re.search('Card', plist):
+			playlist(client,plist)
+			client.shuffle()
+		if re.search('playlist',plist):			
+			client.add(plist)
 			client.shuffle()
 		client.play()
 	except:
 		print 'Could not play playlist %s' % plist 
+
 
 reader = Reader()
 cardList = CardList()
