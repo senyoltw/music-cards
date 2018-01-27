@@ -28,11 +28,11 @@ class Reader:
 		stri=''
 		key = ''
 		while key != 'KEY_ENTER':
-		   r,w,x = select([self.dev], [], [])
-		   for event in self.dev.read():
-			if event.type==1 and event.value==1:
-				stri+=self.keys[ event.code ]
-				#print( keys[ event.code ] )
-				key = ecodes.KEY[ event.code ]
+			r,w,x = select([self.dev], [], [])
+			for event in self.dev.read():
+				if event.type==1 and event.value==1:
+					stri+=self.keys[ event.code ]
+					#print( keys[ event.code ] )
+					key = ecodes.KEY[ event.code ]
 		return stri[:-1]
 

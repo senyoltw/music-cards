@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "music-cards", "music-cards.pyproj", "{5DE4042E-2933-4BD0-AECA-7F1BE1839F0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DE4042E-2933-4BD0-AECA-7F1BE1839F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE4042E-2933-4BD0-AECA-7F1BE1839F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5DBD005-B4A3-4E5D-AB29-A3ADE18D3B11}
+	EndGlobalSection
+EndGlobal
