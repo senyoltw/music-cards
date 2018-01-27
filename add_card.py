@@ -9,10 +9,10 @@ while True:
 		card = reader.readCard()
 		localOrSpotify=raw_input('Press [S] for Spotify Playlist [L] for local folder')
 		if localOrSpotify== "S" or "s":
-			plist=raw_input('Specify Spotify URI or local folder path like this: file:/music/Card*/, q to quit')
+			plist=raw_input('Specify Spotify URI, q to quit')
 			if plist=="q":
 				break
-		if localOrSpotify== "l" or "l":
+		if localOrSpotify== "L" or "l":
 			plist=raw_input('Specify local folder path like this: file:/music/Card*/, q to quit')
 			if plist=="q":
 				break
