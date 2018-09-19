@@ -5,11 +5,8 @@ import re
 from CardList import CardList
 from Reader import Reader
 import sys
-<<<<<<< HEAD
-=======
 import os
 import time
->>>>>>> 16077b7837a611ddccc5d5e187ff931b7ce497af
 
 
 def connectMPD():
@@ -44,11 +41,7 @@ def play(client, plist):
 		if re.search('Card', plist):
 			playlist(client,plist)
 			client.shuffle()
-<<<<<<< HEAD
-		if re.search('playlist',plist):			
-=======
 		if re.search('spotify',plist):
->>>>>>> 16077b7837a611ddccc5d5e187ff931b7ce497af
 			client.add(plist)
 			print plist
 		client.play()
