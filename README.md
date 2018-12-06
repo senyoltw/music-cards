@@ -1,16 +1,33 @@
-This project let's you use a RFID USB Reader to scan RFID tags and play local folders or spotify playlist using pimusicbox or any other mpd server.
-I use this USB reader https://www.amazon.de/Neuftech-Reader-Kartenleseger%C3%A4t-Kartenleser-Kontaktlos/dp/B018OYOR3E/
+#SONYのICカードリーダーで音楽を再生したりするやつ
+買うもの(これで動作確認)
+SONY 非接触ICカードリーダー/ライター PaSoRi RC-S380 https://amzn.to/2QJIx1r
+サンワサプライ NFCタグ https://amzn.to/2E1tzNn 
 
-
-Requires:
-- python evdev. To install:
+# インストール方法
+- nfcpyのインストール
 ```
-wget http://dl.piwall.co.uk/python-evdev_0.4.1-1_armhf.deb
-dpkg -i python-evdev_0.4.1-1_armhf.deb
+sudo pip install nfcpy
 ```
 
 - python mpd-2. To install
+Mopidyなどのmpdクライアント対応音楽サーバを導入しましょう。
 ```
 pip install python-mpd2
 ```
-First run 'python config.py' to select the reader from the inputs.
+
+- music-cardsインストール
+```
+git clone https://github.com/senyoltw/music-cards
+cd music-cards/
+```
+はじめに実行 'python add_card.py' NFCに音楽URLを書き込む.
+書き込み終えたら 'python box.py' でサービス動作
+
+# サービス化
+```
+cd music-cards/
+sudo cp musiccards.service /etc/systemd/system/musiccards.service
+sudo systemctl daemon-reload
+sudo systemctl start musiccards.service
+sudo systemctl enable musiccards.service
+```
