@@ -1,7 +1,7 @@
-#SONYのICカードリーダーで音楽を再生したりするやつ
-買うもの(これで動作確認)
-SONY 非接触ICカードリーダー/ライター PaSoRi RC-S380 https://amzn.to/2QJIx1r
-サンワサプライ NFCタグ https://amzn.to/2E1tzNn 
+#SONYのICカードリーダーで音楽を再生したりするやつ  
+買うもの(以下で動作確認済み)  
+SONY 非接触ICカードリーダー/ライター PaSoRi RC-S380 https://amzn.to/2QJIx1r  
+サンワサプライ NFCタグ https://amzn.to/2E1tzNn   
 
 # インストール方法
 - nfcpyのインストール
@@ -19,10 +19,11 @@ pip install python-mpd2
 ```
 git clone https://github.com/senyoltw/music-cards
 cd music-cards/
+#はじめに実行。NFCに音楽URLを書き込む.
+python add_card.py  
+#動作確認
+python box.py
 ```
-はじめに実行 'python add_card.py' NFCに音楽URLを書き込む.
-書き込み終えたら 'python box.py' でサービス動作
-
 # サービス化
 ```
 cd music-cards/
