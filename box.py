@@ -41,15 +41,21 @@ while True:
 	try:
 		card = reader.readCard()
 		print 'Read card', card
-
+		
+		client = connectMPD()
 		if card != '' and card != before_card:
-			client = connectMPD()
 			play(client, card)
-			client.close()
 			before_card = card
 		elif card == before_card:
-			print "Same card. sleep 5sec"
-			time.sleep(5)
+			print "Same card."
+			client.play()	
+		client.close()
+		
+		reader.released_Card()
+		
+		client = connectMPD()
+		client.pause()
+		client.close()
 
 	except KeyboardInterrupt:
 		sys.exit(0)
@@ -58,7 +64,7 @@ while True:
 		print "this card is new"
 		print "need to Set a new playlist"
                 #add_card()
-		time.sleep(60)
+		reader.released_Card()
 
 	except:
 		pass
