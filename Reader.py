@@ -71,3 +71,14 @@ class Reader:
                                 return(nfc.ndef.TextRecord(tag.ndef.message[0]).text)
                         else:
                                 return False
+
+	def released_Card(self):
+		rdwr_options = {
+			'on-release': self.released,
+		}
+		with nfc.ContactlessFrontend('usb') as clf:
+			tag = clf.connect(rdwr=rdwr_options)
+			if tag.ndef:
+				return(nfc.ndef.TextRecord(tag.ndef.message[0]).text)
+			else:
+				return False
