@@ -10,6 +10,7 @@ class Reader:
 
 	def released(self, tag):
 		print("released:")
+		return tag
 
 	def connected_read(self, tag):
 		if not tag.ndef or not tag.ndef.is_writeable:
