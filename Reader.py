@@ -16,16 +16,14 @@ class Reader:
 		if not tag.ndef or not tag.ndef.is_writeable:
         		print("not a writeable nfc tag")
         		return False
-    		print("data:")
-    		print(nfc.ndef.TextRecord(tag.ndef.message[0]).text)
+    		print 'data:', nfc.ndef.TextRecord(tag.ndef.message[0]).text
 
 	def connected_write(self, tag):
 		if not tag.ndef or not tag.ndef.is_writeable:
 			print("not a writeable nfc tag")
                         return False
 		try:
-                	print("old data:")
-                	print(nfc.ndef.TextRecord(tag.ndef.message[0]).text)
+                	print 'old data:', nfc.ndef.TextRecord(tag.ndef.message[0]).text
 		except ValueError:
 			print "this NFC is NEW"
 
@@ -41,11 +39,9 @@ class Reader:
 			return True
 
 		tag.ndef.message = new_message
-		print("new data:")
-		print(nfc.ndef.TextRecord(tag.ndef.message[0]).text)
+		print 'new data:', nfc.ndef.TextRecord(tag.ndef.message[0]).text
 
 		print "release your NFC"
-		#return True
 
 
 	def readCard(self):
