@@ -38,7 +38,7 @@ print 'Ready: place a card on top of the reader'
 while True:
 	try:
 		card = reader.readCard()
-		print 'Read card', card
+		print "Read card!"
 		
 		client = connectMPD()
 		if card != '' and card != before_card:
@@ -60,8 +60,7 @@ while True:
 
 	except ValueError:
 		print "this card is new"
-		print "need to Set a new playlist"
-                #add_card()
+		print "need to Set a playlist"
 		reader.released_Card()
 
 	except:
