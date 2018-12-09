@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+  <!-- Form
+  ================================================== -->
+<div class="form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="lead">
+            NFCタグを書き換えます。
+        </p>
+        <form action="/read" method="post">
+          <button>NFCの書き換え</button>
+        </form>
+        <form action="/end" method="post">  
+          <button>アプリを終了</button>  
+        </form> 
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
