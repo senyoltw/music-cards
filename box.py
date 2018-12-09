@@ -15,13 +15,11 @@ def connectMPD():
 	except:
 		print 'Could not connect to MPD server'
 
-def play(client, plist):
+def clear_and_play(client, plist):
 	try:
 		client.stop()
 		client.clear()
-
 		client.add(plist)
-
 		client.play()
 	except:
 		print 'Could not play playlist %s' % plist
@@ -44,7 +42,7 @@ while True:
 		
 		client = connectMPD()
 		if card != '' and card != before_card:
-			play(client, card)
+			clear_and_play(client, card)
 			before_card = card
 		elif card == before_card:
 			print "Same card."
