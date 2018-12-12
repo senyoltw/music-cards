@@ -20,6 +20,7 @@ def clear_and_play(client, plist):
 		client.stop()
 		client.clear()
 		client.add(plist)
+		client.repeat(1)
 		client.play()
 	except:
 		print 'Could not play playlist %s' % plist
