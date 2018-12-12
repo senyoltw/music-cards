@@ -47,13 +47,15 @@ while True:
 			before_card = card
 		elif card == before_card:
 			print "Same card."
-			client.play()	
+			if client.status()["state"] != "play":
+				client.play()
 		client.close()
 		
 		reader.released_Card()
 		
 		client = connectMPD()
-		client.pause()
+		if client.status()["state"] != "pause":
+			client.pause()
 		client.close()
 
 	except KeyboardInterrupt:
