@@ -39,7 +39,7 @@ def post():
 		# リクエストフォームから「プレイリスト」を取得して
 		plist = request.form['plist']
 		#プレイリストを書き込み
-		if re.compile("spotify").match(plist):
+		if re.compile("spotify:playlist").match(plist):
 			plist=plist.replace("spotify:playlist", "spotify:user:user:playlist", 1)
 			print "replace for spotify"
 			print(plist)
