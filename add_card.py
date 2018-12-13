@@ -16,7 +16,7 @@ def add_card():
 			break
 
 		if re.compile("spotify").match(plist):
-			plist=plist.replace("spotify", "spotify:user:user", 1)
+			plist=plist.replace("spotify:playlist", "spotify:user:user:playlist", 1)
 			print "replace for spotify"
 			print(plist)
 

@@ -40,7 +40,7 @@ def post():
 		plist = request.form['plist']
 		#プレイリストを書き込み
 		if re.compile("spotify").match(plist):
-			plist=plist.replace("spotify", "spotify:user:user", 1)
+			plist=plist.replace("spotify:playlist", "spotify:user:user:playlist", 1)
 			print "replace for spotify"
 			print(plist)
 		reader.writeCard(plist)
