@@ -1,6 +1,13 @@
 # music-cards(nfc)
 Write playlist,albums,etc... to NFC tags, Read playlist,albums,etc... from NFC tags. And play it.  
 
+```
+NFC tags set.      -> play music.
+NFC tags released. -> pause music.
+Same NFC tags set. -> play music. From the time of pause.
+Another tags set.  -> clear queue. and play music.
+```
+
 need to buy  
 - NFC read/write device(Work with nfcpy)  
 - NFC tags(read/write)
