@@ -2,10 +2,10 @@
 Write playlist,albums,etc... to NFC tags, Read playlist,albums,etc... from NFC tags. And play it.  
 
 ```
-NFC tags set.      -> play music.
-NFC tags released. -> pause music.
-Same NFC tags set. -> play music. From the time of pause.
-Another tags set.  -> clear queue. and play music.
+NFC tag set.      -> play music.
+NFC tag released. -> pause music.
+Same NFC tag set. -> play music. From the time of pause.
+Another tag set.  -> clear queue. and play music.
 ```
 
 need to buy  
