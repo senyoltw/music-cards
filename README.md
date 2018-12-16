@@ -60,7 +60,7 @@ sudo systemctl enable musiccards.service
 NFCの書き込みもWEBで実行したい場合  
 When you want to execute NFC writing on WEB
 ```
-sudo sudo pip install flask
+sudo pip install flask
 cd music-cards/
 sudo cp musiccardshttp.service /etc/systemd/system/musiccardshttp.service
 sudo systemctl daemon-reload
