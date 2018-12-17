@@ -1,4 +1,4 @@
-# music-cards(nfc)
+# music-cards(nfcpy)
 Write playlist,albums,etc... to NFC tags, Read playlist,albums,etc... from NFC tags. And play it.  
 
 ```
