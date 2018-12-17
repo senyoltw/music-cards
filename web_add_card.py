@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-        title = "ようこそ。プレイリストを登録します"
+        title = "NFC Reader/Writer WEB"
         # index.html をレンダリングする
         return render_template('index.html', title=title)
 
@@ -23,7 +23,7 @@ def index():
 def read():
 	res = subprocess.call('sudo systemctl stop musiccards.service', shell=True)
 	print (res)
-	title = "ようこそ。プレイリストを登録します"
+	title = "NFC Reader/Writer WEB"
 	try:
 		plist = reader.readCard()
 	except ValueError:
@@ -34,7 +34,7 @@ def read():
 # /post にアクセスしたときの処理
 @app.route('/post', methods=['GET', 'POST'])
 def post():
-	title = "プレイリスト設定"
+	title = "NFC Reader/Writer WEB"
 	if request.method == 'POST':
 		# リクエストフォームから「プレイリスト」を取得して
 		plist = request.form['plist']
