@@ -67,6 +67,6 @@ sudo systemctl daemon-reload
 sudo systemctl start musiccardshttp.service
 sudo systemctl enable musiccardshttp.service
 
-#and acsess http://[your pi IP]:5000
+#and acsess http://[your IP]:5000
 ```
 
