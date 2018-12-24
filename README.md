@@ -8,6 +8,8 @@ Same NFC tag set. -> play music. From the time of pause.
 Another tag set.  -> clear queue. and play music.
 ```
 
+https://youtu.be/s8S5DVblT0k
+
 need to buy  
 - NFC read/write device(Work with nfcpy)  
 - NFC tags(read/write)
