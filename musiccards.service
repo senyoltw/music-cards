@@ -4,7 +4,6 @@ After=network.target
 
 [Service]
 Type=simple
-User=pi
 WorkingDirectory=/home/pi/music-cards
 ExecStart=/usr/bin/python -u /home/pi/music-cards/box.py
 Restart=always
