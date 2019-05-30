@@ -32,6 +32,15 @@ sudo pip install python-mpd2
 
 - install music server(Can be controlled with mpd)    
 ex. https://github.com/mopidy/mopidy  
+If you want use spotify and spotify:playlist,
+Execute the command in the next step
+```
+git clone https://github.com/kingosticks/mopidy-spotify
+cd mopidy-spotify
+git checkout fix/web-api-playlists-v2
+sudo python2 setup.py build install
+reboot
+```
 
 - music-cards install
 ```
